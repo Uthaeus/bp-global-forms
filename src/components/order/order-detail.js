@@ -26,7 +26,7 @@ function OrderDetail() {
             <div className="order-detail-content-container">
                 <div className="order-detail-item-wrapper">
                     <div className="order-detail-item-label">Customer</div>
-                    <Link to={`/user/${order.customer_id}`} className="order-detail-item">{order.company_name}</Link>
+                    <Link to={`/user/${order.customer_id}`} className="order-detail-item detail-item-link">{order.company_name}</Link>
                 </div>
 
                 <div className="order-detail-item-wrapper">
@@ -79,8 +79,10 @@ function OrderDetail() {
                     <div className="order-detail-item">{order.last_location}</div>
                 </div>
             </div>
+
+            <Link to="/" className="order-detail-back-button">Home</Link>
         </div>
-    )
+    );
 }
 
 export default OrderDetail;

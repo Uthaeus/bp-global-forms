@@ -1,0 +1,50 @@
+
+.order-detail {
+    min-height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    position: relative;
+
+    .order-detail-title {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(3, 3, 3);
+    }
+
+    .order-detail-content-container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+
+        .order-detail-item-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+
+            .order-detail-item-label {
+                font-weight: bold;
+            }
+
+            .order-detail-item {
+                font-size: 1.2rem;
+                color: rgb(3, 3, 3);
+            }
+
+            .detail-item-link {
+                color: rgb(28, 66, 116);
+                text-decoration: none;
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                &:hover {
+                    color: rgb(221, 247, 217);
+                    transform: scale(1.04);
+                }
+                
+            }
+        }
+    }
+}
