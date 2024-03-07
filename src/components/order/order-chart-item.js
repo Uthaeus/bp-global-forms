@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 function OrderChartItem({ order }) {
     return (
-        <div className="order-chart-item">
+        <Link to={`/order/${order.id}`} className="order-chart-item">
             <div className="order-chart-item-item">{order.company_name}</div>
             <div className="order-chart-item-item">{order.po_number}</div>
             <div className="order-chart-item-item">{order.ordered_date}</div>
@@ -9,7 +10,7 @@ function OrderChartItem({ order }) {
             <div className="order-chart-item-item">{order.quantity}</div>
             <div className="order-chart-item-item">{order.destination}</div>
             <div className="order-chart-item-item">{order.order_status}</div>
-        </div>
+        </Link>
     );
 }
 
