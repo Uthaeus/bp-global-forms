@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+
+import { Users } from "../../store/DUMMY_DATA";
 
 function NewOrder() {
     const { register, handleSubmit } = useForm();
+
+    const [users, setUsers] = useState(Users);
+
+    const user = {
+        id: 1,
+        name: "John Doe",
+    };
 
     const onSubmit = (data) => {
         console.log(data);

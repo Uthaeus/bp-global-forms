@@ -1,5 +1,12 @@
 import { Outlet } from "react-router";
 
+import MainNavigation from "./components/navigation/main-navigation";
+
 export default function RootLayout() {
-    return <Outlet />;
+    return (
+        <>
+            <MainNavigation />
+            <Outlet />
+        </>
+    );
 }
