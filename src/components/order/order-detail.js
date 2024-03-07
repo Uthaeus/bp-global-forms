@@ -11,17 +11,17 @@ function OrderDetail() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setOrder(orders.find((order) => order.id === id));
+        setOrder(orders.find((order) => +order.id === +id));
         setLoading(false);
-    }, []);
+    }, [ orders, id]);
 
     if (loading) {
         return <p>Loading...</p>;
-    }
-
+    } 
+    
     return (
         <div className="order-detail">
-            <h2 className="order-detail-title">Order Details for Order #{order.order_number}</h2>
+            <h2 className="order-detail-title">Order Details for Order #{order?.order_number}</h2>
 
             <div className="order-detail-content-container">
                 <div className="order-detail-item-wrapper">
@@ -80,7 +80,7 @@ function OrderDetail() {
                 </div>
             </div>
 
-            <Link to="/" className="order-detail-back-button">Home</Link>
+            <Link to="/" className="order-detail-back-button">Back to Home</Link>
         </div>
     );
 }
