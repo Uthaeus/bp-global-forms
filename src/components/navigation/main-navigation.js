@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 function MainNavigation() {
     return (
-        <nav>
-            <ul>
+        <nav className="main-nav">
+            <ul className="main-nav-list-left">
                 <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? "main-nav-link active" : "main-nav-link"}>Home</NavLink>
                 </li>

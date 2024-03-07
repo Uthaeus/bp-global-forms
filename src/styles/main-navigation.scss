@@ -1,0 +1,32 @@
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 55px;
+    background-color: rgb(3, 3, 3);
+
+    .main-nav-list-left {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    .main-nav-link {
+        color: rgb(165, 159, 146);
+        text-decoration: none;
+        margin: 0 20px;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+            color: rgb(221, 247, 217);
+            transform: scale(1.04);
+        }
+    }
+
+    .active {
+        color: rgb(221, 247, 217);
+        text-decoration: underline;
+    }
+}
