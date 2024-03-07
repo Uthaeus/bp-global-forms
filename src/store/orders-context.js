@@ -12,10 +12,12 @@ export const OrdersContext = createContext({
 
 function OrdersContextProvider(props) {
     const [orders, setOrders] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setOrders(Orders);
-    }, [])
+        setLoading(false);
+    }, []);
 
     function addOrder(order) {
         setOrders((prevOrders) => {
@@ -31,16 +33,15 @@ function OrdersContextProvider(props) {
 
     const value = {
         orders,
-        setOrders,
         addOrder,
         removeOrder
     };
 
     return (
         <OrdersContext.Provider value={value}>
-            {props.children}
+            {!loading && props.children}
         </OrdersContext.Provider>
     );
 }
 
-export default OrdersContextProvider
+export default OrdersContextProvider;

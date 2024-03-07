@@ -1,0 +1,11 @@
+
+.home {
+    min-height: calc(100vh - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home-chart-container {
+        width: 80%;
+    }
+}

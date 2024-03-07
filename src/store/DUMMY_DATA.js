@@ -49,6 +49,7 @@ export const Users = [
 export const Orders = [
     {
         id: 1,
+        company_name: "Company 1",
         customer_id: 1,
         po_number: "PO123",
         order_number: "ORD123",
@@ -66,6 +67,7 @@ export const Orders = [
     },
     {
         id: 2,
+        company_name: "Company 2",
         customer_id: 2,
         po_number: "PO456",
         order_number: "ORD456",
@@ -83,6 +85,7 @@ export const Orders = [
     },
     {
         id: 3,
+        company_name: "Company 3",
         customer_id: 3,
         po_number: "PO789",
         order_number: "ORD789",
@@ -100,6 +103,7 @@ export const Orders = [
     },
     {
         id: 4,
+        company_name: "Company 1",
         customer_id: 1,
         po_number: "PO101",
         order_number: "ORD101",
@@ -117,6 +121,7 @@ export const Orders = [
     },
     {
         id: 5,
+        company_name: "Company 2",
         customer_id: 2,
         po_number: "PO202",
         order_number: "ORD202",
@@ -134,6 +139,7 @@ export const Orders = [
     },
     {
         id: 6,
+        company_name: "Company 3",
         customer_id: 3,
         po_number: "PO303",
         order_number: "ORD303",
