@@ -34,7 +34,7 @@ function UserDetail() {
     return (
         <div className="user-detail">
             <div className="user-detail-header">
-                <div className="user-detail-header-left">
+                <div className="user-detail-header-item">
                     <h2 className="user-detail-title">{user.company_name}</h2>
 
                     <p className="user-detail-subtitle">Email: 
@@ -50,7 +50,7 @@ function UserDetail() {
                     </p>
                 </div>  
 
-                <div className="user-detail-header-right">
+                <div className="user-detail-header-item">
                     <h2 className="user-detail-title">Billing Address</h2>
 
                     <p className="user-detail-subtitle">{user.billing_address.street}</p>
@@ -59,16 +59,16 @@ function UserDetail() {
             </div>
 
             <div className="user-detail-chart-container">
-                <h3 className="user-detail-subtitle">Current Orders:</h3>
+                <h3 className="user-detail-chart-title">Current Orders:</h3>
                 <OrderChart orders={currentOrders} />
             </div>
 
             <div className="user-detail-chart-container">
-                <h3 className="user-detail-subtitle">Delivered Orders:</h3>
+                <h3 className="user-detail-chart-title">Delivered Orders:</h3>
                 <OrderChart orders={deliveredOrders} />
             </div>
 
-            <Link to="/users" className="user-detail-back-link">Back to Home</Link>
+            <Link to="/" className="user-detail-back-link">Back to Home</Link>
         </div>
     );
 }

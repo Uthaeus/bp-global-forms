@@ -8,30 +8,31 @@
 
     .user-detail-header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 2rem;
 
-        .user-detail-header-left {
+        .user-detail-header-item{
+            width: 40%;
             border-bottom: 1px solid #ccc;            
-        }
-
-        .user-detail-header-right {
-            border-bottom: 1px solid #ccc;
         }
 
         .user-detail-title {
             font-size: 1.5rem;
             font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-decoration: underline;
         }
 
         .user-detail-subtitle {
             font-size: 1.1rem;
             color: rgb(3, 3, 3);
+            margin-left: 1rem;
         }
 
         .user-detail-span {
             font-weight: bold;
             color: rgb(29, 35, 42);
+            margin-left: 1rem;
         }
     }
 
