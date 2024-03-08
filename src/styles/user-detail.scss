@@ -1,0 +1,37 @@
+
+.user-detail {
+    min-height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    position: relative;
+
+    .user-detail-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .user-detail-header-left {
+            border-bottom: 1px solid #ccc;            
+        }
+
+        .user-detail-header-right {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .user-detail-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .user-detail-subtitle {
+            font-size: 1.1rem;
+            color: rgb(3, 3, 3);
+        }
+
+        .user-detail-span {
+            font-weight: bold;
+            color: rgb(29, 35, 42);
+        }
+    }
+}
