@@ -11,22 +11,39 @@ function OrderForm({ order, user }) {
     const { addOrder } = useContext(OrdersContext);
 
     const [users, setUsers] = useState(Users);
+    const [isEdit, setIsEdit] = useState(false);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         if (order) {
-            reset(order);
+            reset({
+                user: order.customer_id,
+                poNumber: order.po_number,
+                orderNumber: order.order_number,
+                orderedDate: order.ordered_date,
+                deliveryDate: order.delivery_date,
+                product: order.product,
+                quantity: order.quantity,
+                orderStatus: order.order_status,
+                destination: order.destination,
+                carrier: order.carrier,
+                origin: order.origin,
+                shipDate: order.ship_date,
+                lastLocation: order.last_location,
+            });
+
+            setIsEdit(true);
         }
     }, [order, reset]);
 
-    submitHandler = (data) => {
+    const submitHandler = (data) => {
 
         const newOrder = {
             customer_id: data.user,
             po_number: data.poNumber,
             order_number: data.orderNumber,
-            order_date: data.orderDate,
+            ordered_date: data.orderedDate,
             delivery_date: data.deliveryDate,
             product: data.product,
             quantity: data.quantity,
@@ -39,18 +56,18 @@ function OrderForm({ order, user }) {
             created_at: new Date().toISOString(),
         }
         console.log('adding order', newOrder);
-        
+
         addOrder(newOrder);
         navigate("/");
     };
 
     return (
-        <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="order-form" onSubmit={handleSubmit(submitHandler)}>
             <div className="row">
                 <div className="col-md-6">
                     <div className="form-group mb-3">
                         <label htmlFor="user">User*</label>
-                        <select {...register("user"), { required: true }} className="form-control">
+                        <select {...register("user", { required: true })} className="form-control">
                             <option value="">Select User</option>
                             {users.map((user) => (
                                 <option key={user.id} value={user.id}>
@@ -135,7 +152,7 @@ function OrderForm({ order, user }) {
                 </div>
             </div>
 
-            <input type="submit" value='Create Order' className="btn btn-primary" />
+            <input type="submit" value={isEdit ? "Update Order" : "Create Order"} className="btn btn-primary" />
         </form>
     );
 }

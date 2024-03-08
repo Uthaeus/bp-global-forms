@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import OrderForm from "./order-form";
 
 function NewOrder() {
-    const { register, handleSubmit } = useForm();
 
     const user = {
         id: 1,

@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 
-import OrdersContext from "../../store/orders-context";
+import {OrdersContext} from "../../store/orders-context";
 import OrderForm from "./order-form";
 
 function EditOrder() {
@@ -16,7 +16,7 @@ function EditOrder() {
     };
 
     useEffect(() => {
-        setOrder(orders.find((order) => order.id === id));
+        setOrder(orders.find((order) => +order.id === +id));
     }, [orders, id]);
 
     return (

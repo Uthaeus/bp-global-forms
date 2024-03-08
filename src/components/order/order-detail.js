@@ -10,6 +10,12 @@ function OrderDetail() {
     const [order, setOrder] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const user = {
+        id: 1,
+        name: "John Doe",
+        role: 'admin'
+    };
+
     useEffect(() => {
         setOrder(orders.find((order) => +order.id === +id));
         setLoading(false);
