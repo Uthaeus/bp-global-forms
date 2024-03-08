@@ -1,0 +1,12 @@
+
+.order-form {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(3, 3, 3);
+    border-radius: 10px;
+
+    .error-message {
+        color: red;
+    }
+}

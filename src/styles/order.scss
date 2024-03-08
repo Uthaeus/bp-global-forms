@@ -1,0 +1,48 @@
+
+.order-container {
+    min-height: calc(100vh - 55px);
+    padding: 2rem 3rem 4rem 3rem;
+    position: relative;
+
+    .order-title {
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(3, 3, 3);
+    }
+
+    .order-actions-wrapper {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        display: flex;
+
+        .order-action-button {
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        .order-action-button-back {
+            color: rgb(7, 46, 90);
+
+            &:hover {
+                color: rgb(29, 35, 42);
+            }
+        }
+
+        .order-action-button-delete {
+            color: rgb(131, 14, 1);
+            
+            &:hover {
+                color: rgb(42, 29, 29);
+            }
+        }
+    }
+}
