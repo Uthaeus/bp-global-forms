@@ -8,7 +8,7 @@ function MainNavigation() {
                     <NavLink to="/" className={({ isActive }) => isActive ? "main-nav-link active" : "main-nav-link"}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/new-order" className={({ isActive }) => isActive ? "main-nav-link active" : "main-nav-link"}>New Order</NavLink>
+                    <NavLink to="/order/new" className={({ isActive }) => isActive ? "main-nav-link active" : "main-nav-link"}>New Order</NavLink>
                 </li>
             </ul>
         </nav>

@@ -80,25 +80,12 @@ function OrderDetail() {
                 </div>
             </div>
 
-            <Link to="/" className="order-detail-back-button">Back to Home</Link>
+            <div className="order-detail-actions-container">
+                <Link to="/" className="order-detail-btn order-detail-back-button">Back to Home</Link>
+                {user?.role === "admin" && <Link to={`/order/${order.id}/edit`} className="order-detail-btn order-detail-edit-button">Edit Order</Link>}
+            </div>
         </div>
     );
 }
 
 export default OrderDetail;
-
-// customer_id: data.user,
-// company_name: data.companyName,
-// po_number: data.poNumber,
-// order_number: data.orderNumber,
-// created_at: new Date().toISOString(),
-// ordered_date: data.orderedDate,
-// delivery_date: data.deliveryDate,
-// product: data.product,
-// quantity: data.quantity,
-// destination: data.destination,
-// carrier: data.carrier,
-// origin: data.origin,
-// order_status: data.orderStatus,
-// ship_date: data.shipDate,
-// last_location: data.lastLocation

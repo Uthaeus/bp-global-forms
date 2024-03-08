@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { OrdersContext } from "../../store/orders-context";
+import { useNavigate } from "react-router";
 
 import { Users } from "../../store/DUMMY_DATA";
 
@@ -11,6 +12,8 @@ function OrderForm({ order, user }) {
 
     const [users, setUsers] = useState(Users);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         if (order) {
             reset(order);
@@ -18,11 +21,27 @@ function OrderForm({ order, user }) {
     }, [order, reset]);
 
     submitHandler = (data) => {
-        console.log(data);
 
         const newOrder = {
-
+            customer_id: data.user,
+            po_number: data.poNumber,
+            order_number: data.orderNumber,
+            order_date: data.orderDate,
+            delivery_date: data.deliveryDate,
+            product: data.product,
+            quantity: data.quantity,
+            order_status: data.orderStatus,
+            destination: data.destination,
+            carrier: data.carrier,
+            origin: data.origin,
+            ship_date: data.shipDate,
+            last_location: data.lastLocation,
+            created_at: new Date().toISOString(),
         }
+        console.log('adding order', newOrder);
+        
+        addOrder(newOrder);
+        navigate("/");
     };
 
     return (

@@ -55,17 +55,38 @@
         }
     }
 
-    .order-detail-back-button {
+    .order-detail-actions-container {
         position: absolute;
         bottom: 2rem;
         right: 2rem;
-        font-size: 1.2rem;
-        color: rgb(28, 66, 116);
-        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        display: flex;
 
-        &:hover {
-            color: rgb(43, 65, 39);
-            transform: scale(1.04);
+        .order-detail-btn {
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+
+        .order-detail-back-button {
+            color: rgb(28, 66, 116);
+
+            &:hover {
+                color: rgb(43, 65, 39);
+            }
+        }
+
+        .order-detail-edit-button {
+            color: rgb(1, 131, 14);
+
+            &:hover {
+                color: rgb(3, 204, 66);
+            }
         }
     }
+
+    
 }
