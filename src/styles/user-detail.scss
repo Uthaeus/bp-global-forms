@@ -34,4 +34,22 @@
             color: rgb(29, 35, 42);
         }
     }
+
+    .user-detail-chart-container {
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    .user-detail-back-link {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        color: rgb(29, 35, 42);
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+            color: rgb(3, 3, 3);
+            transform: scale(1.1);
+        }
+    }
 }

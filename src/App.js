@@ -4,6 +4,7 @@ import RootLayout from "./root-layout";
 import Home from "./pages/home";
 import NewOrder from "./components/orders/new-order";
 import OrderDetail from "./components/order/order-detail";
+import UserDetail from "./components/user/user-detail";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/order/:id",
         element: <OrderDetail />,
+      },
+      {
+        path: "/user/:id",
+        element: <UserDetail />,
       },
     ],
   },

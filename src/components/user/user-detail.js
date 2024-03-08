@@ -3,6 +3,8 @@ import { useState, useEffect, useContext } from "react";
 
 import { OrdersContext } from "../../store/orders-context";
 
+import OrderChart from "../order/order-chart";
+
 const user = {
     id: 1, 
     contact_name: "John",
@@ -20,11 +22,13 @@ const user = {
 }
 
 function UserDetail() {
-    const [userOrders, setUserOrders] = useState([]);
+    const [currentOrders, setCurrentOrders] = useState([]);
+    const [deliveredOrders, setDeliveredOrders] = useState([]);
     const { orders } = useContext(OrdersContext);
 
     useEffect(() => {
-        setUserOrders(orders.filter(order => order.customer_id === user.id));
+        setCurrentOrders(orders.filter((order) => order.customer_id === user.id && order.order_status !== "delivered"));
+        setDeliveredOrders(orders.filter((order) => order.customer_id === user.id && order.order_status === "delivered"));
     }, [orders]);
 
     return (
@@ -53,7 +57,18 @@ function UserDetail() {
                     <p className="user-detail-subtitle">{user.billing_address.city}, {user.billing_address.state} {user.billing_address.zip}</p>
                 </div>
             </div>
-            <Link to="/users">Back</Link>
+
+            <div className="user-detail-chart-container">
+                <h3 className="user-detail-subtitle">Current Orders:</h3>
+                <OrderChart orders={currentOrders} />
+            </div>
+
+            <div className="user-detail-chart-container">
+                <h3 className="user-detail-subtitle">Delivered Orders:</h3>
+                <OrderChart orders={deliveredOrders} />
+            </div>
+
+            <Link to="/users" className="user-detail-back-link">Back to Home</Link>
         </div>
     );
 }
