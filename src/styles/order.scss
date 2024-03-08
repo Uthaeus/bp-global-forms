@@ -1,7 +1,7 @@
 
 .order-container {
     min-height: calc(100vh - 55px);
-    padding: 2rem 3rem 4rem 3rem;
+    padding: 2rem 3rem;
     position: relative;
 
     .order-title {
@@ -38,10 +38,11 @@
         }
 
         .order-action-button-delete {
+            cursor: pointer;
             color: rgb(131, 14, 1);
             
             &:hover {
-                color: rgb(42, 29, 29);
+                color: rgb(97, 19, 19);
             }
         }
     }

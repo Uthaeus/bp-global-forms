@@ -15,7 +15,9 @@ function NewOrder() {
             
             <OrderForm user={user} />
 
-            <Link to='/' className="order-link">Back to Home</Link>
+            <div className="order-actions-wrapper">
+                <Link to='/' className="order-action-button order-action-button-back">Back to Home</Link>
+            </div>
         </div>
     );
 }

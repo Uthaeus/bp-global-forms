@@ -29,7 +29,7 @@ function EditOrder() {
 
     return (
         <div className="order-container">
-            <h1 className="order-title">Edit Order</h1>
+            <h1 className="order-title">Edit Order {order?.order_number}</h1>
             
             {order && <OrderForm order={order} user={user} />}
 
