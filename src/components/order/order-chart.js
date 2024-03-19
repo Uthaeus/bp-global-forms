@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 import OrderChartItem from "./order-chart-item";
 import OrderChartHeader from "./order-chart-header";
