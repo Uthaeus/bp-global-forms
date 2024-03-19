@@ -31,7 +31,7 @@ function EditOrder() {
         <div className="order-container">
             <h1 className="order-title">Edit Order {order?.order_number}</h1>
             
-            {order && <OrderForm order={order} user={user} />}
+            {order && <OrderForm order={order} />}
 
             <div className="order-actions-wrapper">
                 {user?.role === 'admin' && <p className="order-action-button order-action-button-delete" onClick={deleteOrderHandler}>Delete Order</p>}

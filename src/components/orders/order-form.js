@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 import { Users } from "../../store/DUMMY_DATA";
 
-function OrderForm({ order, user }) {
+function OrderForm({ order }) {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { addOrder } = useContext(OrdersContext);
